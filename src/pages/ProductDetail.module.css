@@ -1,0 +1,10 @@
+.productDetail__wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.backLink {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+}

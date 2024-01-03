@@ -1,0 +1,16 @@
+.navMobile {
+  position: fixed;
+  top: 106px;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: #fff;
+  z-index: 200;
+}
+
+.navMobile__content {
+  max-width: 1100px;
+  margin: 0 auto;
+}

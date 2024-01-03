@@ -1,0 +1,48 @@
+.additionalNavigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+.additionalNavigation__card {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+.additionalNavigation__cardImage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 110px;
+}
+
+.additionalNavigation__cardContent {
+  margin-top: 4rem;
+  padding: 4rem 2rem 2rem;
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.additionalNavigation__link {
+  color: #000;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 760px) {
+  .additionalNavigation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .additionalNavigation__card {
+    width: 33%;
+  }
+}

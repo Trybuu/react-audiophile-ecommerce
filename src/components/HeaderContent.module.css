@@ -1,0 +1,65 @@
+.headerWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 50;
+}
+
+.headerImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/image-hero.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  z-index: 40;
+}
+
+.productFeature {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  opacity: 0.5;
+}
+
+.headerText {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 700px) {
+  .headerImage {
+    /* position: relative; */
+    background-size: 80%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .headerWrapper {
+    justify-content: space-between;
+  }
+  .headerContent {
+    align-items: flex-start;
+    width: 40%;
+    padding: 1rem;
+    text-align: left;
+  }
+  .headerImage {
+    position: relative;
+    width: 50%;
+  }
+}
