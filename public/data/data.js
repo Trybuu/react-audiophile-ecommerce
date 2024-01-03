@@ -43,6 +43,11 @@ export const products = [
       ['1', '3.5mm 5m audio cable'],
     ],
     mainImage: '/data/images/xx59/image-product.jpg',
+    gallery: [
+      '/data/images/xx59/gallery/image-gallery-1.jpg',
+      '/data/images/xx59/gallery/image-gallery-2.jpg',
+      '/data/images/xx59/gallery/image-gallery-3.jpg',
+    ],
   },
   {
     id: 'xx99_mk1',
@@ -63,6 +68,11 @@ export const products = [
       ['1', '3.5mm 5m audio cable'],
     ],
     mainImage: '/data/images/xx99_mk1/image-product.jpg',
+    gallery: [
+      '/data/images/xx99_mk1/gallery/image-gallery-1.jpg',
+      '/data/images/xx99_mk1/gallery/image-gallery-2.jpg',
+      '/data/images/xx99_mk1/gallery/image-gallery-3.jpg',
+    ],
   },
   {
     id: 'zx7',
@@ -84,6 +94,11 @@ export const products = [
       ['1', '7.5m optical cable'],
     ],
     mainImage: '/data/images/zx7/image-product.jpg',
+    gallery: [
+      '/data/images/zx7/gallery/image-gallery-1.jpg',
+      '/data/images/zx7/gallery/image-gallery-2.jpg',
+      '/data/images/zx7/gallery/image-gallery-3.jpg',
+    ],
   },
   {
     id: 'zx9',
@@ -105,6 +120,11 @@ export const products = [
       ['1', '10m optical cable'],
     ],
     mainImage: '/data/images/zx9/image-product.jpg',
+    gallery: [
+      '/data/images/zx9/gallery/image-gallery-1.jpg',
+      '/data/images/zx9/gallery/image-gallery-2.jpg',
+      '/data/images/zx9/gallery/image-gallery-3.jpg',
+    ],
   },
   {
     id: 'yx1',
@@ -126,5 +146,10 @@ export const products = [
       ['1', 'Travel pouch'],
     ],
     mainImage: '/data/images/yx1/image-product.jpg',
+    gallery: [
+      '/data/images/yx1/gallery/image-gallery-1.jpg',
+      '/data/images/yx1/gallery/image-gallery-2.jpg',
+      '/data/images/yx1/gallery/image-gallery-3.jpg',
+    ],
   },
 ]
