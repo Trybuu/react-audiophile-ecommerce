@@ -16,7 +16,7 @@ export default function Headphones() {
               <img src={el.mainImage} alt={`${el.name} main image`} />
               <h2>{el.name}</h2>
               <p>{el.shortDescription}</p>
-              <Link to={el.link}>See product</Link>
+              <Link to={`/${el.category}/${el.id}`}>See product</Link>
             </div>
           </li>
         ))}
