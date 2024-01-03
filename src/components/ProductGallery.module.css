@@ -1,0 +1,19 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.image {
+  border-radius: 0.5rem;
+  width: 50%;
+}
+
+@media screen and (min-width: 760px) {
+  .gallery {
+    flex-direction: row;
+  }
+}

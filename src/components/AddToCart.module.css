@@ -1,0 +1,30 @@
+.toCart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+
+.button {
+  background-color: transparent;
+}
+
+.button:hover,
+.button:focus {
+  color: rgb(216, 125, 74);
+}
+
+.button__add {
+  background-color: #f1f1f1;
+}
+
+.counter {
+  margin: 0 1rem;
+  font-weight: 600;
+}

@@ -4,7 +4,7 @@ export const products = [
     category: 'headphones',
     isNew: true,
     name: 'XX99 MK2 Headphones',
-    price: 350,
+    price: 750,
     description:
       'As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.',
     shortDescription:
@@ -18,6 +18,11 @@ export const products = [
       ['1', '3.5mm 5m audio cable'],
     ],
     mainImage: '/data/images/xx99_mk2/image-product.jpg',
+    gallery: [
+      '/data/images/xx99_mk2/gallery/image-gallery-1.jpg',
+      '/data/images/xx99_mk2/gallery/image-gallery-2.jpg',
+      '/data/images/xx99_mk2/gallery/image-gallery-3.jpg',
+    ],
   },
   {
     id: 'xx59',

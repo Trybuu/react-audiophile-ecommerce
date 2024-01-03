@@ -3,3 +3,8 @@
   background-color: rgb(216, 125, 74);
   color: rgb(255, 255, 255);
 }
+
+.button:hover,
+.button:focus {
+  filter: brightness(1.2);
+}

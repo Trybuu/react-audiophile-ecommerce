@@ -2,6 +2,11 @@ import { useParams, Link } from 'react-router-dom'
 import { products } from '/public/data/data'
 
 import classes from './ProductDetail.module.css'
+import ProductHeader from '../components/ProductHeader'
+import AddToCart from '../components/AddToCart'
+import Features from '../components/Features'
+import InTheBox from '../components/InTheBox'
+import ProductGallery from '../components/ProductGallery'
 
 export default function ProductDetail() {
   const params = useParams()
@@ -14,47 +19,21 @@ export default function ProductDetail() {
       <Link to=".." relative="path" className={classes.backLink}>
         Go Back
       </Link>
-
-      <div>
-        <img src={product.mainImage} alt="" />
-        {product.isNew && (
-          <p>
-            <span>New Product</span>
-          </p>
-        )}
-        <p>{product.description}</p>
+      <ProductHeader
+        img={product.mainImage}
+        name={product.name}
+        desc={product.description}
+        isNew={product.isNew}
+        price={product.price}
+      >
+        <AddToCart />
+      </ProductHeader>
+      <div className={classes.flex}>
+        <Features title="Features" description={product.features} />
+        <InTheBox arr={product.inTheBox} />
       </div>
 
-      <div>
-        <p>${product.price}</p>
-        <div>
-          <p>
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
-          </p>
-          <button>Add to cart</button>
-        </div>
-      </div>
-
-      <div>
-        <h2>Features</h2>
-        <p>{product.features}</p>
-      </div>
-
-      <div>
-        <h2>In the box</h2>
-        <ul>
-          {product.inTheBox.map((el) => {
-            return (
-              <li key={Math.random(1000)}>
-                <span>{el[0]}x </span>
-                {el[1]}
-              </li>
-            )
-          })}
-        </ul>
-      </div>
+      <ProductGallery gallery={product.gallery} />
     </div>
   )
 }

@@ -1,0 +1,9 @@
+.features {
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .features {
+    width: 60%;
+  }
+}

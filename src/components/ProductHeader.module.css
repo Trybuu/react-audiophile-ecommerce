@@ -1,0 +1,32 @@
+.header {
+  margin: 1rem 0;
+}
+
+.header__image {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.header__new {
+  color: rgb(216, 125, 74);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.header__price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 760px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .header__image {
+    width: 50%;
+  }
+}
