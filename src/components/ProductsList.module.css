@@ -1,0 +1,32 @@
+.element {
+  margin: 4rem 0;
+}
+
+.element__content {
+}
+.element__image {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.element__new {
+  color: rgb(216, 125, 74);
+  letter-spacing: 5px;
+}
+
+@media screen and (min-width: 1000px) {
+  .element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .element:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+  .element__image {
+    width: 50%;
+  }
+}

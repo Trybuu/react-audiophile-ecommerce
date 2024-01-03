@@ -1,0 +1,13 @@
+.linkButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  background-color: rgb(216, 125, 74);
+  color: rgb(255, 255, 255);
+}
+
+.linkButton:hover,
+.linkButton:focus {
+  color: rgb(255, 255, 255);
+  filter: brightness(1.2);
+}

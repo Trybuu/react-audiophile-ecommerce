@@ -1,6 +1,5 @@
-import { NavLink } from 'react-router-dom'
-import Button from '../ui/Button'
 import classes from './HeaderContent.module.css'
+import LinkButton from '../ui/LinkButton'
 
 export default function HeaderContent() {
   return (
@@ -14,9 +13,7 @@ export default function HeaderContent() {
             made for the passionate music enthusiast.
           </p>
           <p>
-            <Button>
-              <NavLink to="/headphones/xx99_mk2">See product</NavLink>
-            </Button>
+            <LinkButton linkTo="/headphones/xx99_mk2">SEE PRODUCT</LinkButton>
           </p>
         </div>
         <div className={classes.headerImage}></div>

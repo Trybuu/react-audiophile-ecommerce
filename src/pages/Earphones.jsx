@@ -1,17 +1,22 @@
-import { Link } from 'react-router-dom'
+import { products } from '../../public/data/data.js'
+import ContentWrapper from '../components/ContentWrapper.jsx'
+import CategoryTitle from '../ui/CategoryTitle.jsx'
+import ProductsList from '../components/ProductsList.jsx'
+import AdditionalNavigation from '../components/AdditionalNavigation.jsx'
+import About from '../components/About.jsx'
 
-export default function Headphones() {
+export default function Earphones() {
+  const earphones = products.filter(
+    (product) => product.category === 'earphones',
+  )
   return (
     <>
-      <h1>Earphones</h1>
-      <ul>
-        <li>
-          <Link to="earphone-1">Earphone 1</Link>
-        </li>
-        <li>
-          <Link to="earphone-2">Earphone 2</Link>
-        </li>
-      </ul>
+      <CategoryTitle category={'Earphones'} />
+      <ContentWrapper>
+        <ProductsList products={earphones} />
+        <AdditionalNavigation />
+        <About />
+      </ContentWrapper>
     </>
   )
 }

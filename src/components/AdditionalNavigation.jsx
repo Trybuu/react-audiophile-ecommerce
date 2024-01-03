@@ -13,7 +13,10 @@ export default function AdditionalNavigation() {
         />
         <div className={classes.additionalNavigation__cardContent}>
           <h3>Headphones</h3>
-          <NavLink className={classes.additionalNavigation__link}>
+          <NavLink
+            className={classes.additionalNavigation__link}
+            to="/headphones"
+          >
             SHOP <img src={arrow} alt="Arrow right" />
           </NavLink>
         </div>
@@ -27,7 +30,10 @@ export default function AdditionalNavigation() {
         />
         <div className={classes.additionalNavigation__cardContent}>
           <h3>Speakers</h3>
-          <NavLink className={classes.additionalNavigation__link}>
+          <NavLink
+            className={classes.additionalNavigation__link}
+            to="/speakers"
+          >
             SHOP <img src={arrow} alt="Arrow right" />
           </NavLink>
         </div>
@@ -41,7 +47,10 @@ export default function AdditionalNavigation() {
         />
         <div className={classes.additionalNavigation__cardContent}>
           <h3>Earphones</h3>
-          <NavLink className={classes.additionalNavigation__link}>
+          <NavLink
+            className={classes.additionalNavigation__link}
+            to="/earphones"
+          >
             SHOP <img src={arrow} alt="Arrow right" />
           </NavLink>
         </div>
