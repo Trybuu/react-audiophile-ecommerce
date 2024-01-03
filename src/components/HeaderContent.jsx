@@ -15,7 +15,7 @@ export default function HeaderContent() {
           </p>
           <p>
             <Button>
-              <NavLink to="/headphones/xx99_mk1">See product</NavLink>
+              <NavLink to="/headphones/xx99_mk2">See product</NavLink>
             </Button>
           </p>
         </div>
