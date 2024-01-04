@@ -5,7 +5,7 @@ Audiophile is challenge ecommerce website from Frontend Mentor.
 ## Installation
 
 How to install. 
-Cd to /frontend folder then in terminal:
+In root folder open terminal and run:
 
 ```bash
 npm install
