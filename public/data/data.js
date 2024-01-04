@@ -109,7 +109,7 @@ export const products = [
     description:
       'Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.',
     shortDescription:
-      'Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.',
+      'Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.',
     features:
       'Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m). Discover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms.',
     inTheBox: [
@@ -120,6 +120,7 @@ export const products = [
       ['1', '10m optical cable'],
     ],
     mainImage: '/data/images/zx9/image-product.jpg',
+    imageRender: '/data/images/zx9/gallery/image-speaker-render.png',
     gallery: [
       '/data/images/zx9/gallery/image-gallery-1.jpg',
       '/data/images/zx9/gallery/image-gallery-2.jpg',
