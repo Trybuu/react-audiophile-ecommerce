@@ -10,7 +10,6 @@ export default function MenuButton() {
     } else {
       setMenu(true)
     }
-    console.log(menu, window.location.pathname)
   }
 
   document.addEventListener('keydown', (e) => {
