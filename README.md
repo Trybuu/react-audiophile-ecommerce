@@ -1,13 +1,15 @@
-# Foobar
+# Audiophile React Ecommerce
 
-Foobar is a Python library for dealing with word pluralization.
+Audiophile is challenge ecommerce website from Frontend Mentor.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+How to install. 
+Cd to /frontend folder then in terminal:
 
 ```bash
-pip install foobar
+npm install
+npm run dev
 ```
 
 ## Usage
