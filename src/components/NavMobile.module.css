@@ -3,13 +3,19 @@
   top: 106px;
   left: 0;
   width: 100%;
+  max-height: 70vh;
   margin: 0 auto;
   padding: 2rem 1rem;
   border-radius: 0 0 0.5rem 0.5rem;
   background-color: #fff;
-  z-index: 50;
+  z-index: 100;
   animation-duration: 0.5s;
+  overflow-y: auto;
   animation-name: slidein;
+}
+
+.navMobile::-webkit-scrollbar {
+  display: none;
 }
 
 .navMobile__content {

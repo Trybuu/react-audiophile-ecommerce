@@ -9,7 +9,7 @@ import NavMobile from '../components/NavMobile'
 
 export default function RootLayout() {
   const { menu } = useMenu()
-  console.log(menu)
+
   return (
     <>
       <ScrollToTop />

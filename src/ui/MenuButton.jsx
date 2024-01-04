@@ -10,8 +10,21 @@ export default function MenuButton() {
     } else {
       setMenu(true)
     }
-    console.log(menu)
+    console.log(menu, window.location.pathname)
   }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu === true) {
+      setMenu(false)
+    }
+  })
+
+  document.addEventListener('click', (e) => {
+    if (e.target.href !== undefined) {
+      setMenu(false)
+    }
+  })
+
   return (
     <button
       className={`${classes.menuButton} ${
