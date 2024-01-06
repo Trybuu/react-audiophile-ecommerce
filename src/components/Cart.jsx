@@ -86,7 +86,7 @@ export default function Cart() {
         </ul>
         <div className={classes.cart__total}>
           <span>TOTAL</span>
-          <p className={classes.cart__totalPrice}>{cartTotal}</p>
+          <p className={classes.cart__totalPrice}>${cartTotal}</p>
         </div>
 
         <div className={classes.cart__buttons}>

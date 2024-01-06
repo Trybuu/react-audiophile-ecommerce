@@ -30,18 +30,14 @@ function cartReducer(state, action) {
   }
 
   if (action.type === 'REMOVE_ITEM') {
-    console.log('REMOVE ITEM')
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id,
     )
-    console.log('exiting cart item index: ', existingCartItemIndex)
     const existingCartItem = state.items[existingCartItemIndex]
     const updatedItems = [...state.items]
-    console.log('existingcart  item quantity: ', existingCartItem.quantity)
     if (existingCartItem.quantity === 1) {
       updatedItems.splice(existingCartItemIndex, 1)
     } else {
-      console.log('WIecej niz jeden')
       const updatedItem = {
         ...existingCartItem,
         quantity: existingCartItem.quantity - 1,

@@ -23,11 +23,6 @@ export default function MainNavigation() {
 
         <CartButton />
       </nav>
-      {/* <div className={classes.modalWrapper}>
-        <div className={classes.modalWrapper__content}>
-          <div className={classes.cart}></div>
-        </div>
-      </div> */}
     </>
   )
 }

@@ -19,7 +19,7 @@ export default function ProductDetail() {
   return (
     <div className={classes.productDetail__wrapper}>
       <Link to=".." relative="path" className={classes.backLink}>
-        Go Back
+        Go to {product.category}
       </Link>
       <ProductHeader
         img={product.mainImage}
