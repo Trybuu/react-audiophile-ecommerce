@@ -4,11 +4,12 @@ import classes from './AddToCart.module.css'
 
 import CartContext from '../store/CartContext'
 
-export default function AddToCart() {
+export default function AddToCart({ product }) {
   const [count, setCount] = useState(1)
   const cartCtx = useContext(CartContext)
 
   function incrementCount() {
+    console.log(product)
     setCount((prev) => prev + 1)
   }
   function decrementCount() {
@@ -17,8 +18,15 @@ export default function AddToCart() {
   }
 
   function handleAddProductToCart() {
-    console.log('Hello!')
-    cartCtx.addItem({ id: 'zx9', price: 550, img: '/image/photo.jpg' })
+    cartCtx.addItem({
+      id: product.id,
+      name: product.name,
+      image: product.mainImage,
+      price: product.price,
+      quantity: count,
+    })
+
+    setCount(1)
   }
 
   return (
@@ -33,7 +41,6 @@ export default function AddToCart() {
         </button>
       </p>
       <Button onClick={handleAddProductToCart}>Add to cart</Button>
-      <button onClick={handleAddProductToCart}>Add</button>
     </div>
   )
 }

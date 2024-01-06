@@ -4,6 +4,7 @@ const CartContext = createContext({
   items: [],
   addItem: (item) => {},
   removeItem: (id) => {},
+  itemsQuantity: () => {},
 })
 
 function cartReducer(state, action) {
@@ -18,29 +19,60 @@ function cartReducer(state, action) {
       const existingItem = state.items[existingCartItemIndex]
       const updatedItem = {
         ...existingItem,
-        quantity: existingItem.quantity + 1,
+        quantity: existingItem.quantity + action.item.quantity,
       }
       updatedItems[existingCartItemIndex] = updatedItem
     } else {
-      updatedItems.push({ ...action.item, quantity: 1 })
+      updatedItems.push({ ...action.item, quantity: action.item.quantity })
     }
 
     return { ...state, items: updatedItems }
   }
 
   if (action.type === 'REMOVE_ITEM') {
+    console.log('REMOVE ITEM')
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id,
     )
-
+    console.log('exiting cart item index: ', existingCartItemIndex)
     const existingCartItem = state.items[existingCartItemIndex]
     const updatedItems = [...state.items]
-
+    console.log('existingcart  item quantity: ', existingCartItem.quantity)
     if (existingCartItem.quantity === 1) {
       updatedItems.splice(existingCartItemIndex, 1)
     } else {
-      const updatedItem = { ...(existingCartItem.quantity - 1) }
+      console.log('WIecej niz jeden')
+      const updatedItem = {
+        ...existingCartItem,
+        quantity: existingCartItem.quantity - 1,
+      }
+
       updatedItems[existingCartItemIndex] = updatedItem
+    }
+
+    return { ...state, items: updatedItems }
+  }
+
+  if (action.type === 'CLEAR_CART') {
+    return { ...state, items: [] }
+  }
+
+  if (action.type === 'INCREASE_QUANTITY') {
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.item.id,
+    )
+
+    const updatedItems = [...state.items]
+
+    if (existingCartItemIndex > -1) {
+      const existingItem = state.items[existingCartItemIndex]
+      const updatedItem = {
+        ...existingItem,
+        quantity: existingItem.quantity + 1,
+      }
+      updatedItems[existingCartItemIndex] = updatedItem
+    } else {
+      updatedItems.push({ ...action.item, quantity: action.item.quantity })
     }
 
     return { ...state, items: updatedItems }
@@ -60,10 +92,29 @@ export function CartContextProvider({ children }) {
     dispatchCartAction({ type: 'REMOVE_ITEM', id })
   }
 
+  function clearCart() {
+    dispatchCartAction({ type: 'CLEAR_CART' })
+  }
+
+  function increaseQuantity(item) {
+    dispatchCartAction({ type: 'INCREASE_QUANTITY', item: item })
+  }
+
+  function itemsQuantity() {
+    const quantity = cart.items.reduce(
+      (totalQuantity, item) => totalQuantity + item.quantity,
+      0,
+    )
+    return quantity
+  }
+
   const cartContext = {
     items: cart.items,
     addItem: addItem,
     removeItem: removeItem,
+    clearCart: clearCart,
+    itemsQuantity: itemsQuantity,
+    increaseQuantity: increaseQuantity,
   }
 
   console.log(cartContext.items)

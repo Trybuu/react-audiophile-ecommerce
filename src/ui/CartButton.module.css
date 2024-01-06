@@ -1,0 +1,21 @@
+.cart__button {
+  position: relative;
+}
+
+.cart__quantity {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  right: 20%;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: orangered;
+}
+
+.cart__quantityNumber {
+  color: #fff;
+  font-size: 0.5rem;
+}

@@ -28,7 +28,7 @@ export default function ProductDetail() {
         isNew={product.isNew}
         price={product.price}
       >
-        <AddToCart />
+        <AddToCart product={product} />
       </ProductHeader>
       <div className={classes.flex}>
         <Features title="Features" description={product.features} />
