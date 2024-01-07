@@ -113,8 +113,6 @@ export function CartContextProvider({ children }) {
     increaseQuantity: increaseQuantity,
   }
 
-  console.log(cartContext.items)
-
   return (
     <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>
   )

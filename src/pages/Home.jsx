@@ -9,7 +9,6 @@ import ShowProductSmall from '../components/ShowProductSmall'
 import { products } from '/public/data/data'
 
 export default function Home() {
-  console.log(products)
   return (
     <>
       <Hero>

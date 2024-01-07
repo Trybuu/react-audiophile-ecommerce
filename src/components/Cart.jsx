@@ -29,8 +29,7 @@ export default function Cart() {
 
   function handleAddItem(id) {
     const existingProduct = cartCtx.items.filter((product) => product.id === id)
-    const [product] = [...existingProduct] // cartCtx.addItem(product)
-    // console.log('Add item', id, product)
+    const [product] = [...existingProduct]
     cartCtx.increaseQuantity(product)
   }
 
